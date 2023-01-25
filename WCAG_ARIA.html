@@ -1,0 +1,97 @@
+
+<html lang="en">
+    <head>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <link rel="stylesheet" href="Header.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navigation Menu</title>
+        <nav class="navbar">
+            <div class="navbar-container container">
+                <input type="checkbox" name="" id="">
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <ul class="menu-items">
+                    <li><a href="Keyboard_Shortcuts.html"  accesskey="K" tabinddex="0">Keyboard Shortcuts</a></li>
+                    <li><a href="Play.html"  accesskey="p" tabinddex="1">Play</a></li>
+                    <li><a href="FAQ.html"  accesskey="q" tabinddex="2">FAQ</a></li>
+                    <li><a href="Home.html"tabinddex="3"  accesskey="h">Home</a></li>
+                    <li><a href="Contact.html"  accesskey="c" tabinddex="4">Contact</a></li>
+                </ul>
+                <h1 class="logo">Navigation Menu</h1>
+            </div>
+        </nav>
+    </head>
+    <body>
+        <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+            <h1 class="w3-margin w3-jumbo">WCAG and ARIA </h1>
+          
+          <!-- First Grid -->
+          <div class="w3-row-padding w3-padding-64 w3-container">
+            <div class="w3-content">
+              <div class="w3-twothird">
+                <h1 tabindex="5"><b>WCAG</b></h1>
+                <h5 class="w3-padding-32">WCAG, also known as web content accessibility guidelines, is part of a series of web accessibility guidelines publiched by the main international standards.
+                    These standards help websites like this help websites achieve otpimum levels of accessbility to allow as many users as possible to be subject to the website.
+                    Many of the principles and guidelines have been closely followed and many
+                     features have adapted to follow these guidelines.
+                      There is lots more information WCAG and the procedures and guidelines in WCAG,
+                       <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Simple Click this link to learn mor about WCAG.</a>
+                </h5>
+
+          
+               
+              </div>    
+          
+              <div class="w3-third w3-center">
+                <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Second Grid -->
+          <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+            <div class="w3-content">
+              <div class="w3-third w3-center">
+                <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
+              </div>
+          
+              <div class="w3-twothird">
+                <h1 tabindex="6"><b>ARIA</b></h1>
+                <h5 class="w3-padding-32">What is ARIA? it stands for Accessible Rich Internet Applications
+                    . It is a set of attributes that provide the user with extra content with regards to the layout, content UI etc.
+                    This website makes full use of ARIA within the code, which in turn allows the user to have grasp of what i happening on the screen
+                    , without actually having to look at it. It uses screen readers capabilities and further enhances it to allow them to provide the user with extra
+                    information. To further explore ARIA, <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles"> just Click here to explore more about ARIA </a>
+                </h5>
+          
+               
+              </div>
+            </div>
+          </div>
+
+          
+         
+          
+          <script>
+          function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+              x.className += " w3-show";
+            } else { 
+              x.className = x.className.replace(" w3-show", "");
+            }
+          }
+          </script>
+    </body>
+    </html>
+   

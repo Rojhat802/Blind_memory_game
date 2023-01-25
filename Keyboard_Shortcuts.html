@@ -1,0 +1,104 @@
+<html lang="en">
+    <head>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <link rel="stylesheet" href="Header.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navigation Menu</title>
+        <nav class="navbar">
+            <div class="navbar-container container">
+                <input type="checkbox" name="" id="">
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <ul class="menu-items">
+                    <li><a href="FAQ.html" accesskey="q"tabinddex="0">FAQ</a></li>
+                    <li><a href="Play.html"accesskey="p"tabinddex="1">Play</a></li>
+                    <li><a href="Home.html"accesskey="h"tabinddex="2">Home</a></li>
+                    <li><a href="WCAG_ARIA.html"accesskey="W"tabinddex="3">WCAG and ARIA</a></li>
+                    <li><a href="Contact.html"accesskey="C"tabinddex="4">Contact</a></li>
+                </ul>
+                <h1 class="logo">Navigation Menu</h1>
+            </div>
+        </nav>
+    </head>
+    <body>
+        <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+          <a href="#main" class="skip"> Skip to Windows shortcuts</a>
+            <h1 class="w3-margin w3-jumbo">Keyboard Shortcuts
+            </h1>
+          
+          <!-- First Grid -->
+          <div class="w3-row-padding w3-padding-64 w3-container">
+            <div class="w3-content">
+              <div class="w3-twothird">
+                <h1>Memory shortcuts (access keys) for both MAC and Windows</h1>
+                <main id="main">
+                <h5 class="w3-padding-32">The Shortcuts for <b>Windows</b> are:
+                    .<li><b>Alt + p </b> will take you to the play/customisation page </li>
+                    <li><b>Alt + h </b> will take you to the home page </li>
+                    <li><b>Alt + k </b> will take you to the keyboard shortcuts page( this one) </li>
+                    <li><b>Alt + Q </b> will take you to the FAQ page </li>
+                    <li><b>Alt + c </b> will take you to the contacts page </li>
+                    <li><b>Alt + w </b> will take you to the WCAG/ARIA page </li>
+                    <li><b>Alt + l </b> will take you to the Login/Register page </li>
+                    </h5>
+          
+               
+              </div>    
+          
+              <div class="w3-third w3-center">
+                <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Second Grid -->
+          <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+            <div class="w3-content">
+              <div class="w3-third w3-center">
+                <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
+              </div>
+          
+              <div class="w3-twothird">
+                <h5 class="w3-padding-32">The Shortcuts for <b>Mac</b> are:
+                    .<li><b>Ctrl + p </b> will take you to the play/customisation page </li>
+                    <li><b>Ctrl + h </b> will take you to the home page </li>
+                    <li><b>Ctrl + k </b> will take you to the keyboard shortcuts page( this one) </li>
+                    <li><b>Ctrl + Q </b> will take you to the FAQ page </li>
+                    <li><b>Ctrl + c </b> will take you to the contacts page </li>
+                    <li><b>Ctrl + w </b> will take you to the WCAG/ARIA page </li>
+                    <li><b>Ctrl + l </b> will take you to the Login/Register page </li>
+                    </h5>
+          
+               
+              </div>
+            </div>
+          </div>
+          
+     
+          
+          
+         
+          
+          <script>
+          function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+              x.className += " w3-show";
+            } else { 
+              x.className = x.className.replace(" w3-show", "");
+            }
+          }
+          </script>
+    </body>
+    </html>
+   
