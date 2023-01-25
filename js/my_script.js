@@ -88,17 +88,15 @@ MapForKeys.set(4,4);
 MapForKeys.set(5,5);
 MapForKeys.set(6,6);
 MapForKeys.set(7,7);
-MapForKeys.set(8,7);
+MapForKeys.set(8,8);
 MapForKeys.set(9,9);
-MapForKeys.set(10,'q');
-MapForKeys.set(11,'w');
-MapForKeys.set(12,'r');
-MapForKeys.set(13,'t');
-MapForKeys.set(14,'y');
-MapForKeys.set(15,'u');
-MapForKeys.set(16,'i');
-MapForKeys.set(17,'o');
-MapForKeys.set(18,'p');
+MapForKeys.set(10,'r');
+MapForKeys.set(11,'t');
+MapForKeys.set(12,'y');
+MapForKeys.set(13,'u');
+MapForKeys.set(14,'i');
+MapForKeys.set(15,'o');
+MapForKeys.set(16,'p');
 
 
 
