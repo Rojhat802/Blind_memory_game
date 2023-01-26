@@ -66,9 +66,6 @@ const content = {
   ],
 };
 
-/*============================================
-              Global Variables
-============================================*/
 let menuSelection;
 let timer;
 let centiseconds = 00;
@@ -208,10 +205,9 @@ function shuffle(array) {
 
 const makeGameBoard = (someContent) => {
  
-    
-  // Remove all contents from game board
+  
   $('#gameboard').empty();
-  // Populate game baord
+
  
   someContent.map((word, index) => {
     counter+=1
@@ -226,9 +222,7 @@ const makeGameBoard = (someContent) => {
 };
 
 
-/*============================================
-                    TIMER
-============================================*/
+
 const timeHandler = () => {
   return timerGoing ? (
     timer = setInterval(timeCounter, 100)
@@ -258,18 +252,10 @@ const stopTimer = () => {
 };
 
 
-/*============================================
-              SCORE and STRIKES
-============================================*/
-// Event handler to catalog card picks in array 'cardPicks'
 const handlePicks = (event) => {
-  // console.log(event);
-  // Long targeting needed for when game matches 'word' with 'sound'
   handleAudio(event.target.nextElementSibling.children[0].firstChild.id);
-
   $(event.target).addClass('card-show');
   let pick = $(event.target).siblings("div").attr('class');
-  // Disable the card picked so it can't be clicked twice
   $(event.target).prop( "disabled", true );
   cardPicks.push(pick);
 
@@ -444,15 +430,13 @@ const resetGame = () => {
   minutes =  0;
   timerGoing = true;
 
-  // Clear Interval so when button is clicked, the time doesn't count twice as fast
+
   clearInterval(timer);
-  // Reset DOM so time, score and strikes display 0s
+ 
   $('#time').html(`<span>${minutes}:${seconds}:${centiseconds}</span>`);
   $('#score').html(score);
   $('#strikes').html(strikes);
-  // Removes Winner Modal window
   $('.results').removeClass('show-results');
-  // Covers all uncovered cards
   $('.card-cover').removeClass('card-show');
 
 };
