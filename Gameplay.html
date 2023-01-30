@@ -24,7 +24,6 @@
             </div>
             <ul class="menu-items">
               <li><a href="Keyboard_Shortcuts.html" accesskey="K"tabinddex="0">Keyboard Shortcuts</a></li>
-              <li><a href="Instuctions.html"accesskey="i"tabinddex="1">Play</a></li>
               <li><a href="FAQ.html"accesskey="q"tabinddex="2">FAQ</a></li>
               <li><a href="WCAG_ARIA.html"accesskey="w"tabinddex="3">WCAG and ARIA</a></li>
               <li><a href="Contact.html"accesskey="c"tabinddex="4">Contact</a></li>
@@ -51,11 +50,11 @@
         <div id="top-five-container">
           <h3 id="top-five-heading">Best Times:</h3>
             <ul id="winners-board">
-              <li class="placing">1st:<span id="first"></span></li>
-              <li class="placing">2nd: <span id="second">--------------</span></li>
-              <li class="placing">3rd: <span id="third">--------------</span></li>
-              <li class="placing">4th: <span id="fourth">--------------</span></li>
-              <li class="placing">5th: <span id="fifth">--------------</span></li>
+              <li class="placing" tabinddex="1">1st:<span id="first"></span></li>
+              <li class="placing"tabinddex="1">2nd: <span id="second">--------------</span></li>
+              <li class="placing"tabinddex="1">3rd: <span id="third">--------------</span></li>
+              <li class="placing"tabinddex="1">4th: <span id="fourth">--------------</span></li>
+              <li class="placing"tabinddex="1">5th: <span id="fifth">--------------</span></li>
             </ul>
         </div>
       </section>
@@ -71,7 +70,7 @@
           <h3 class="ctrl-headers tooltiptext" title="Mintes:Seconds.CentiSeconds">Timer</h3>
           <p id="time">0:0.0</p>
         </div>
-        <div class="score-container">
+        <div class="score-container" >
           <h3 class="ctrl-headers tooltiptext" id="scorehead" title="Get 80 Points = You Win!">Score</h3>
           <p id="score">0</p>
         </div>
@@ -82,9 +81,9 @@
       </section>
 
       <!-- Select Content Menu -->
-      <div id="menu-container"  style="margin-top:100px;">
+      <div id="menu-container"  style="margin-top:100px;" accesskey="L">
         <select id="menu" name="content-menu" autofocus>
-          <option disabled selected>Start here</option>
+          <option disabled selected>Please select one of the game-modes below</option>
           <option value="twelve_cards_Sounds">Sound on Sound. 12 cards</option>
           <option value="twelve_cards_Words">Word on Sound. 12 cards</option>
           <option value="sixteen_cards_Words">Word on Sound. 16 cards</option>
@@ -97,6 +96,10 @@
         <button class="play-btn" accesskey="p">Play</button>
         <button class="reset-btn hide" accesskey="c">Reset</button>
       </div>
+      <h5 class="w3-padding-32"> Please see <a href="Keyboard_Shortcuts.html"> Please see the instructions page for more information on how to use
+         keyboard shortcuts to navigate through the game and instructions. </a>  
+       
+      </h5>
 
 
 

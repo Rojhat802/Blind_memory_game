@@ -106,6 +106,8 @@ const gameAudio = {
     rightAnswer: new Audio('audio/RightCards.mp3'),
     wrongAnswer: new Audio('audio/wrong.mp3'),
     Final_Attempt: new Audio('audio/Final_Attempt.mp3'),
+    Five_Attempt: new Audio('audio/Five_Strikes.mp3'),
+    empty: new Audio('audio/empty.mp3'),
     winningSound: new Audio('audio/winner.mp3'),
     losingSound: new Audio('audio/loser.mp3'),
     animals: {
@@ -137,7 +139,7 @@ const gameAudio = {
 
 const playClickCard = () => gameAudio.clickCard.play();
 const playRightAnswer = () => gameAudio.rightAnswer.play();
-const playWrongAnswer = () => strikes != 9 ? gameAudio.wrongAnswer.play() : gameAudio.Final_Attempt.play();
+const playWrongAnswer = () => strikes != 9 ? gameAudio.wrongAnswer.play() : gameAudio.Final_Attempt.play(); 
 const playWinnerSound = () => gameAudio.winningSound.play();
 const playLoserSound = () => gameAudio.losingSound.play();
 const handleAudio = (event) => {
@@ -146,6 +148,7 @@ const handleAudio = (event) => {
     :
     gameAudio.animals[`${event}`].play()
 }
+
 
 
 /*============================================
