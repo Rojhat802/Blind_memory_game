@@ -43,7 +43,7 @@
         <p id="win-time"></p>
 
 
-        <div class="btn" id="play-again-container">
+        <div class="btn" role="button" id="play-again-container">
           <button class="play-again-btn" accesskey="g">Play Again</button>
         </div>
 
@@ -81,29 +81,35 @@
       </section>
 
       <!-- Select Content Menu -->
-      <div id="menu-container"  style="margin-top:100px;" accesskey="L">
+      <div id="menu-container"  style="margin-top:100px;" accesskey="L"
+      type="button"
+      aria-haspopup="menu"
+      aria-label="Text Color: orange"
+      aria-details="Please use the arrow keys to select which game mode you would like to play"
+      aria-brailleroledescription="dropdwn"
+      aria-description="dropdown for game mode">
         <select id="menu" name="content-menu" autofocus>
-          <option disabled selected>Please select one of the game-modes below</option>
-          <option value="twelve_cards_Sounds">Sound on Sound. 12 cards</option>
-          <option value="twelve_cards_Words">Word on Sound. 12 cards</option>
-          <option value="sixteen_cards_Words">Word on Sound. 16 cards</option>
-          <option value="sixteen_cards_Sounds">Sound on Sound. 16 cards</option>
+          <option tabinddex="0" disabled selected>Please select one of the game-modes below</option>
+          <option tabinddex="0" aria-expanded="true" value="twelve_cards_Sounds">Sound on Sound. 12 cards</option>
+          <option tabinddex="0" aria-expanded="true" value="twelve_cards_Words">Word on Sound. 12 cards</option>
+          <option tabinddex="0" aria-expanded="true" value="sixteen_cards_Words">Word on Sound. 16 cards</option>
+          <option tabinddex="0" aria-expanded="true" value="sixteen_cards_Sounds">Sound on Sound. 16 cards</option>
         </select>
       </div>
 
       <!-- Play Button -->
-      <div class="btn" id="play-reset-container">
+      <div class="btn" type="button" id="play-reset-container">
         <button class="play-btn" accesskey="p">Play</button>
         <button class="reset-btn hide" accesskey="c">Reset</button>
       </div>
-      <h5 class="w3-padding-32"> Please see <a href="Keyboard_Shortcuts.html"> Please see the instructions page for more information on how to use
+      <h5 class="w3-padding-32"> Please see <a role="link" href="Keyboard_Shortcuts.html"> Please see the instructions page for more information on how to use
          keyboard shortcuts to navigate through the game and instructions. </a>  
        
       </h5>
 
 
 
-      <section id="gameboard">
+      <section id="gameboard" aria-roledescription="contains all the cards" aria-brailleroledescription="gameboard">
         <!-- JavaScript creates the game board -->
       </section>
 

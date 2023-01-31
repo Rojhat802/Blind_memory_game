@@ -91,9 +91,9 @@ MapForKeys.set(10,'r');
 MapForKeys.set(11,'t');
 MapForKeys.set(12,'y');
 MapForKeys.set(13,'u');
-MapForKeys.set(14,'i');
-MapForKeys.set(15,'o');
-MapForKeys.set(16,'p');
+MapForKeys.set(14,'o');
+MapForKeys.set(15,'a');
+MapForKeys.set(16,'s');
 
 
 
@@ -216,7 +216,7 @@ const makeGameBoard = (someContent) => {
     counter+=1
     $('#gameboard').append(
       `<div class="square">
-        <div class="card-cover" tabindex="1" accesskey="${MapForKeys.get(counter)}"></div>
+        <div class="card-cover" aria-roledescription="card number ${counter}" tabindex="1" accesskey="${MapForKeys.get(counter)}"></div>
         <div class="${word[1]}"><span class="span-for-content">${word[0]}</span></div>
        </div>`);
   });
