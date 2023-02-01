@@ -81,13 +81,16 @@
       </section>
 
       <!-- Select Content Menu -->
-      <div id="menu-container"  style="margin-top:100px;" accesskey="L"
+      <div id="menu-container"
+      style="margin-top:100px;"
+      accesskey="L"
       type="button"
       aria-haspopup="menu"
       aria-label="Text Color: orange"
       aria-details="Please use the arrow keys to select which game mode you would like to play"
       aria-brailleroledescription="dropdwn"
-      aria-description="dropdown for game mode">
+      aria-description="dropdown for game mode"
+      aria-required="true">
         <select id="menu" name="content-menu" autofocus>
           <option tabinddex="0" disabled selected>Please select one of the game-modes below</option>
           <option tabinddex="0" aria-expanded="true" value="twelve_cards_Sounds">Sound on Sound. 12 cards</option>
@@ -102,14 +105,14 @@
         <button class="play-btn" accesskey="p">Play</button>
         <button class="reset-btn hide" accesskey="c">Reset</button>
       </div>
-      <h5 class="w3-padding-32"> Please see <a role="link" href="Keyboard_Shortcuts.html"> Please see the instructions page for more information on how to use
+      <h5 class="w3-padding-32">  <a role="link" href="Keyboard_Shortcuts.html" aria-keyshortcuts="Alt+Shift+A"> Please see the instructions page for more information on how to use
          keyboard shortcuts to navigate through the game and instructions. </a>  
        
       </h5>
 
 
 
-      <section id="gameboard" aria-roledescription="contains all the cards" aria-brailleroledescription="gameboard">
+      <section id="gameboard" role="main" aria-roledescription="contains all the cards" aria-brailleroledescription="gameboard">
         <!-- JavaScript creates the game board -->
       </section>
 
