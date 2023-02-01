@@ -47,7 +47,7 @@
           <button class="play-again-btn" accesskey="g">Play Again</button>
         </div>
 
-        <div id="top-five-container">
+        <div id="top-five-container" aria-haspopup="listbox">
           <h3 id="top-five-heading">Best Times:</h3>
             <ul id="winners-board">
               <li class="placing" tabinddex="1">1st:<span id="first"></span></li>
@@ -66,7 +66,7 @@
 
       <!-- Time-Score-Strikes Panel -->
       <section id="time-strikes-score">
-        <div class="time-container">
+        <div class="time-container" role="timer">
           <h3 class="ctrl-headers tooltiptext" title="Mintes:Seconds.CentiSeconds">Timer</h3>
           <p id="time">0:0.0</p>
         </div>
