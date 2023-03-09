@@ -102,6 +102,7 @@ MapForKeys.set(16,'s');
           Audio - Sound effects
 ============================================*/
 const gameAudio = {
+    PlayGame: new Audio('audio/Play.mp3'),
     clickCard: new Audio('audio/click.mp3'),
     rightAnswer: new Audio('audio/RightCards.mp3'),
     wrongAnswer: new Audio('audio/wrong.mp3'),
@@ -165,8 +166,11 @@ $('#menu').on("change", function(event) {
 // Click Play Button to reset values and trigger Shuffle
 $('.play-btn').on('click', (event) => {
     if (menuSelection == undefined) {
-      alert('Please Select a your desired game mode.');
+      alert('Please Select  your desired game mode.');
     } else {
+      setTimeout(() => {
+        gameAudio.PlayGame.play();
+      }, 2000); 
       $('.play-btn').addClass('hide'); // hides Play button
       $('.reset-btn').removeClass('hide'); // shows Reset button
       resetGame();
@@ -184,6 +188,8 @@ $('.reset-btn').on('click', (event) => {
 $('.play-again-btn').on('click', (event) => {
   resetGame();
   shuffle(menuSelection);
+  
+
 });
 
 // Using Fisher-Yates method
@@ -216,7 +222,7 @@ const makeGameBoard = (someContent) => {
     counter+=1
     $('#gameboard').append(
       `<div class="square">
-        <div class="card-cover" aria-roledescription="card number ${counter}" tabindex="1" accesskey="${MapForKeys.get(counter)}"></div>
+        <div class="card-cover" aria-hidden="true" aria-roledescription="card number ${counter}"  accesskey="${MapForKeys.get(counter)}"></div>
         <div class="${word[1]}"><span class="span-for-content">${word[0]}</span></div>
        </div>`);
   });

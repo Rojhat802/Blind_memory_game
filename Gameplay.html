@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Home Page</title>
+    
     <nav class="navbar">
         <div class="navbar-container container">
             <input type="checkbox" name="" id="">
@@ -43,7 +44,7 @@
         <p id="win-time"></p>
 
 
-        <div class="btn" role="button" aria-details="Press ALT + G to play again" id="play-again-container">
+        <div class="btn"  aria-details="Press ALT + G to play again" id="play-again-container">
           <button class="play-again-btn" accesskey="g">Play Again</button>
         </div>
 
@@ -89,7 +90,6 @@
       aria-label="Text Color: orange"
       aria-details="Please use the arrow keys to select which game mode you would like to play"
       aria-brailleroledescription="dropdwn"
-      aria-description="dropdown for game mode"
       aria-required="true">
         <select id="menu" name="content-menu" autofocus>
           <option tabinddex="0" disabled selected>Please select one of the game-modes below</option>
@@ -102,8 +102,8 @@
 
       <!-- Play Button -->
       <div class="btn" type="button" id="play-reset-container">
-        <button class="play-btn" accesskey="p">Play</button>
-        <button class="reset-btn hide" accesskey="c">Reset</button>
+        <button aria-pressed="false"  class="play-btn" accesskey="p">Play</button>
+        <button  class="reset-btn hide" accesskey="c"  >Reset</button>
       </div>
       <h5 class="w3-padding-32">  <a role="link" href="Keyboard_Shortcuts.html" aria-keyshortcuts="Alt+Shift+A"> Please see the instructions page for more information on how to use
          keyboard shortcuts to navigate through the game and instructions. </a>  
