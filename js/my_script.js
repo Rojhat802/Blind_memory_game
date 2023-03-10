@@ -191,6 +191,20 @@ $('.play-again-btn').on('click', (event) => {
   
 
 });
+//Testing buttons for each of the sounds
+$('.test-sound-btn').on('click', (event) => {
+  gameAudio.wrongAnswer.play()
+});
+$('.test-sound-btn-lose').on('click', (event) => {
+  gameAudio.losingSound.play()
+});
+$('.test-sound-btn-correct').on('click', (event) => {
+  gameAudio.rightAnswer.play()
+});
+$('.test-sound-btn-won').on('click', (event) => {
+  gameAudio.winningSound.play()
+});
+
 
 // Using Fisher-Yates method
 function shuffle(array) {
