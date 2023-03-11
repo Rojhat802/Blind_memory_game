@@ -39,7 +39,7 @@
     <main>
 
       <!-- Results window for Winner-->
-      <section class="results">
+      <section class="results" role="alertdialog">
         <h2 id="you-won-msg">You won!</h2>
         <p id="win-time"></p>
 
@@ -68,15 +68,15 @@
       <!-- Time-Score-Strikes Panel -->
       <section id="time-strikes-score">
         <div class="time-container" role="timer">
-          <h3 class="ctrl-headers tooltiptext" title="Mintes:Seconds.CentiSeconds">Timer</h3>
+          <h3 class="ctrl-headers tooltiptext" title="Mintes:Seconds.CentiSeconds" tabinddex="1">Timer</h3>
           <p id="time">0:0.0</p>
         </div>
         <div class="score-container" >
-          <h3 class="ctrl-headers tooltiptext" id="scorehead" title="Get 80 Points = You Win!">Score</h3>
+          <h3 class="ctrl-headers tooltiptext" id="scorehead" title="Get 80 Points = You Win!" tabinddex="1">Score</h3>
           <p id="score">0</p>
         </div>
         <div class="strikes-container">
-          <h3 class="ctrl-headers tooltiptext" title="10 Strikes = Game Over">Strikes</h3>
+          <h3 class="ctrl-headers tooltiptext" title="10 Strikes = Game Over" tabinddex="1">Strikes</h3>
           <p id="strikes">0</p>
         </div>
       </section>
