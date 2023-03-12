@@ -102,6 +102,13 @@ MapForKeys.set(16,'s');
           Audio - Sound effects
 ============================================*/
 const gameAudio = {
+  twentysec: new Audio('audio/twentysec.mp3'),
+  fortysec: new Audio('audio/fortysec.mp3'),
+  sixtysec: new Audio('audio/sixtysec.mp3'),
+  eightysec: new Audio('audio/eightysec.mp3'),
+  hundredsec: new Audio('audio/hundredsec.mp3'),
+    PlayGame: new Audio('audio/Play.mp3'),
+    PlayGame: new Audio('audio/Play.mp3'),
     clickCard: new Audio('audio/click.mp3'),
     rightAnswer: new Audio('audio/RightCards.mp3'),
     wrongAnswer: new Audio('audio/wrong.mp3'),
@@ -165,8 +172,26 @@ $('#menu').on("change", function(event) {
 // Click Play Button to reset values and trigger Shuffle
 $('.play-btn').on('click', (event) => {
     if (menuSelection == undefined) {
-      alert('Please Select a your desired game mode.');
+      alert('Please Select  your desired game mode.');
     } else {
+      setTimeout(() => {
+        gameAudio.PlayGame.play();
+      }, 2000); 
+      setTimeout(() => {
+        gameAudio.twentysec.play();
+      }, 20000);
+      setTimeout(() => {
+        gameAudio.fortysec.play();
+      }, 40000);
+      setTimeout(() => {
+        gameAudio.sixtysec.play();
+      }, 60000);
+      setTimeout(() => {
+        gameAudio.eightysec.play();
+      }, 80000);
+      setTimeout(() => {
+        gameAudio.hundredsec.play();
+      }, 100000);
       $('.play-btn').addClass('hide'); // hides Play button
       $('.reset-btn').removeClass('hide'); // shows Reset button
       resetGame();
@@ -184,7 +209,23 @@ $('.reset-btn').on('click', (event) => {
 $('.play-again-btn').on('click', (event) => {
   resetGame();
   shuffle(menuSelection);
+  
+
 });
+//Testing buttons for each of the sounds
+$('.test-sound-btn').on('click', (event) => {
+  gameAudio.wrongAnswer.play()
+});
+$('.test-sound-btn-lose').on('click', (event) => {
+  gameAudio.losingSound.play()
+});
+$('.test-sound-btn-correct').on('click', (event) => {
+  gameAudio.rightAnswer.play()
+});
+$('.test-sound-btn-won').on('click', (event) => {
+  gameAudio.winningSound.play()
+});
+
 
 // Using Fisher-Yates method
 function shuffle(array) {
@@ -216,7 +257,7 @@ const makeGameBoard = (someContent) => {
     counter+=1
     $('#gameboard').append(
       `<div class="square">
-        <div class="card-cover" aria-roledescription="card number ${counter}" tabindex="1" accesskey="${MapForKeys.get(counter)}"></div>
+        <div class="card-cover" aria-hidden="true" aria-roledescription="card number ${counter}"  accesskey="${MapForKeys.get(counter)}"></div>
         <div class="${word[1]}"><span class="span-for-content">${word[0]}</span></div>
        </div>`);
   });
