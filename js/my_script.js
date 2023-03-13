@@ -107,8 +107,7 @@ const gameAudio = {
   sixtysec: new Audio('audio/sixtysec.mp3'),
   eightysec: new Audio('audio/eightysec.mp3'),
   hundredsec: new Audio('audio/hundredsec.mp3'),
-    PlayGame: new Audio('audio/Play.mp3'),
-    PlayGame: new Audio('audio/Play.mp3'),
+    PlayGame: new Audio('audio/Playgame.mp3'),
     clickCard: new Audio('audio/click.mp3'),
     rightAnswer: new Audio('audio/RightCards.mp3'),
     wrongAnswer: new Audio('audio/wrong.mp3'),
@@ -173,25 +172,7 @@ $('#menu').on("change", function(event) {
 $('.play-btn').on('click', (event) => {
     if (menuSelection == undefined) {
       alert('Please Select  your desired game mode.');
-    } else {
-      setTimeout(() => {
-        gameAudio.PlayGame.play();
-      }, 2000); 
-      setTimeout(() => {
-        gameAudio.twentysec.play();
-      }, 20000);
-      setTimeout(() => {
-        gameAudio.fortysec.play();
-      }, 40000);
-      setTimeout(() => {
-        gameAudio.sixtysec.play();
-      }, 60000);
-      setTimeout(() => {
-        gameAudio.eightysec.play();
-      }, 80000);
-      setTimeout(() => {
-        gameAudio.hundredsec.play();
-      }, 100000);
+    } else { 
       $('.play-btn').addClass('hide'); // hides Play button
       $('.reset-btn').removeClass('hide'); // shows Reset button
       resetGame();
@@ -282,6 +263,24 @@ const timeCounter = () => {
       minutes += 1;
       seconds = 0;
       centiseconds = 0;
+    }
+    if (centiseconds>9 &&seconds==0){
+      gameAudio.PlayGame.play();
+    }
+    if (centiseconds>9 &&seconds==19){
+      gameAudio.twentysec.play();
+    }
+    if (centiseconds>9 &&seconds==39){
+      gameAudio.fortysec.play();
+    }
+    if(centiseconds>9 && seconds==59){
+      gameAudio.sixtysec.play();
+    }
+    if(centiseconds && seconds== 79){
+      gameAudio.eightysec.play();
+    }
+    if(centiseconds>9 && seconds==99){
+      gameAudio.hundredsec.play();
     }
       if (centiseconds > 9) {
       seconds += 1;
