@@ -15,7 +15,7 @@
 
     <title>Home Page</title>
     
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Navigation Menu">
         <div class="navbar-container container">
             <input type="checkbox" name="" id="">
             <div class="hamburger-lines">
@@ -24,11 +24,11 @@
                 <span class="line line3"></span>
             </div>
             <ul class="menu-items">
-              <li><a href="Keyboard_Shortcuts.html" accesskey="K"tabinddex="0">Keyboard Shortcuts</a></li>
-              <li><a href="FAQ.html"accesskey="q"tabinddex="2">FAQ</a></li>
-              <li><a href="WCAG_ARIA.html"accesskey="w"tabinddex="3">WCAG and ARIA</a></li>
-              <li><a href="Contact.html"accesskey="c"tabinddex="4">Contact</a></li>
-              <li><a href="index.html"accesskey="h"tabinddex="5">Home</a></li>
+              <li><a href="Keyboard_Shortcuts.html" accesskey="K"tabindex="0">Keyboard Shortcuts</a></li>
+              <li><a href="FAQ.html"accesskey="q"tabindex="2">FAQ</a></li>
+              <li><a href="WCAG_ARIA.html"accesskey="w"tabindex="3">WCAG and ARIA</a></li>
+              <li><a href="Contact.html"accesskey="c"tabindex="4">Contact</a></li>
+              <li><a href="index.html"accesskey="h"tabindex="5">Home</a></li>
           </ul>
             <h1 class="logo">Navigation Menu</h1>
         </div>
@@ -38,9 +38,9 @@
    
     <main>
 
-      <!-- Results window for Winner-->
+
       <section class="results" role="alertdialog">
-        <h2 id="you-won-msg">You won!</h2>
+        <h2 id="you-won-msg">You won!</h2>tabindex
         <p id="win-time"></p>
 
 
@@ -51,32 +51,28 @@
         <div id="top-five-container" aria-haspopup="listbox">
           <h3 id="top-five-heading">Best Times:</h3>
             <ul id="winners-board">
-              <li class="placing" tabinddex="1">1st:<span id="first"></span></li>
-              <li class="placing"tabinddex="1">2nd: <span id="second">--------------</span></li>
-              <li class="placing"tabinddex="1">3rd: <span id="third">--------------</span></li>
-              <li class="placing"tabinddex="1">4th: <span id="fourth">--------------</span></li>
-              <li class="placing"tabinddex="1">5th: <span id="fifth">--------------</span></li>
+              <li class="placing" tabindex="1">1st:<span id="first"></span></li>
+              <li class="placing"tabindex="1">2nd: <span id="second">--------------</span></li>
+              <li class="placing"tabindex="1">3rd: <span id="third">--------------</span></li>
+              <li class="placing"tabindex="1">4th: <span id="fourth">--------------</span></li>
+              <li class="placing"tabindex="1">5th: <span id="fifth">--------------</span></li>
             </ul>
         </div>
       </section>
-
-      <!-- Visual result for Loser-->
       <section id="loser-x">
         <dix id="loser-symbol">&#10754;</dix>
       </section>
-
-      <!-- Time-Score-Strikes Panel -->
       <section id="time-strikes-score">
         <div class="time-container" role="timer">
-          <h3 class="ctrl-headers tooltiptext" title="Mintes:Seconds.CentiSeconds" tabinddex="1">Timer</h3>
+          <h3 class="ctrl-headers tooltiptext" title="Mintes:Seconds.CentiSeconds" tabindex="1">Timer</h3>
           <p id="time">0:0.0</p>
         </div>
         <div class="score-container" >
-          <h3 class="ctrl-headers tooltiptext" id="scorehead" title="Get 80 Points = You Win!" tabinddex="1">Score</h3>
+          <h3 class="ctrl-headers tooltiptext" id="scorehead" title="Get 80 Points = You Win!" tabindex="1">Score</h3>
           <p id="score">0</p>
         </div>
         <div class="strikes-container">
-          <h3 class="ctrl-headers tooltiptext" title="10 Strikes = Game Over" tabinddex="1">Strikes</h3>
+          <h3 class="ctrl-headers tooltiptext" title="10 Strikes = Game Over" tabindex="1">Strikes</h3>
           <p id="strikes">0</p>
         </div>
       </section>
@@ -92,15 +88,13 @@
       aria-brailleroledescription="dropdwn"
       aria-required="true">
         <select id="menu" name="content-menu" autofocus>
-          <option tabinddex="0" disabled selected>Please select one of the game-modes below</option>
-          <option tabinddex="0" aria-expanded="true" value="twelve_cards_Sounds">Sound on Sound. 12 cards</option>
-          <option tabinddex="0" aria-expanded="true" value="twelve_cards_Words">Word on Sound. 12 cards</option>
-          <option tabinddex="0" aria-expanded="true" value="sixteen_cards_Words">Word on Sound. 16 cards</option>
-          <option tabinddex="0" aria-expanded="true" value="sixteen_cards_Sounds">Sound on Sound. 16 cards</option>
+          <option tabindex="0" disabled selected>Please select one of the game-modes below</option>
+          <option tabindex="0" aria-expanded="true" value="twelve_cards_Sounds">Sound on Sound. 12 cards</option>
+          <option tabindex="0" aria-expanded="true" value="twelve_cards_Words">Word on Sound. 12 cards</option>
+          <option tabindex="0" aria-expanded="true" value="sixteen_cards_Words">Word on Sound. 16 cards</option>
+          <option tabindex="0" aria-expanded="true" value="sixteen_cards_Sounds">Sound on Sound. 16 cards</option>
         </select>
       </div>
-
-      <!-- Play Button -->
       <div class="btn" type="button" id="play-reset-container">
         <button aria-pressed="false"  class="play-btn" accesskey="p">Play</button>
         <button  class="reset-btn hide" accesskey="c"  >Reset</button>
@@ -113,7 +107,6 @@
 
 
       <section id="gameboard" role="main" aria-roledescription="contains all the cards" aria-brailleroledescription="gameboard">
-        <!-- JavaScript creates the game board -->
       </section>
 
     </main>
