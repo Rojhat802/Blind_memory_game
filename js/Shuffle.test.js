@@ -14,21 +14,21 @@ describe('shuffle', () => {
   // Test that the function works with empty arrays
   it('should handle empty arrays', () => {
     const inputArray = [];
-
+  
     shuffle(inputArray);
-
-    expect(inputArray).toEqual([]);
+  
+    expect(inputArray).toBe([]);
   });
-
+  
   // Test that the function works with arrays of length 1
   it('should handle arrays of length 1', () => {
     const inputArray = [1];
-
+  
     shuffle(inputArray);
-
-    expect(inputArray).toEqual([1]);
+  
+    expect(inputArray).toHaveLength(1);
+    expect(inputArray[0]).toEqual(1);
   });
-
   // Test that the function calls makeGameBoard with the shuffled array
   it('should call makeGameBoard with the shuffled array', () => {
     const inputArray = [1, 2, 3, 4, 5];

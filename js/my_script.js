@@ -156,34 +156,44 @@ const handleAudio = (event) => {
 }
 
 
+
+/*============================================
+          Select Menu for Content
+============================================*/
 $('#menu').on("change", function(event) {
   menuSelection = content[event.target.value];
 });
 
+
+/*============================================
+      Play / Reset to Shuffle Content
+============================================*/
+// Click Play Button to reset values and trigger Shuffle
 $('.play-btn').on('click', (event) => {
     if (menuSelection == undefined) {
       alert('Please Select  your desired game mode.');
     } else { 
-      $('.play-btn').addClass('hide'); 
-      $('.reset-btn').removeClass('hide'); 
+      $('.play-btn').addClass('hide'); // hides Play button
+      $('.reset-btn').removeClass('hide'); // shows Reset button
       resetGame();
-      shuffle(menuSelection); 
+      shuffle(menuSelection); // shuffles content, makes gameboard and starts timer
     }
 });
 
 $('.reset-btn').on('click', (event) => {
   $('.reset-btn').addClass('hide');
   $('.play-btn').removeClass('hide');
-  resetGame(); 
+  resetGame(); // resets gameboard values BUT doesn't start Timer
 });
 
+// Click Play Again Button on Modal Window
 $('.play-again-btn').on('click', (event) => {
   resetGame();
   shuffle(menuSelection);
   
 
 });
-
+//Testing buttons for each of the sounds
 $('.test-sound-btn').on('click', (event) => {
   gameAudio.wrongAnswer.play()
 });
@@ -197,6 +207,8 @@ $('.test-sound-btn-won').on('click', (event) => {
   gameAudio.winningSound.play()
 });
 
+
+// Using Fisher-Yates method
 function shuffle(array) {
   var i = 0
     , j = 0
@@ -210,9 +222,7 @@ function shuffle(array) {
   }
   makeGameBoard(array);
 }
-module.exports = {
-  shuffle,
-};
+
 
 /*============================================
             Add Content to DOM
@@ -232,7 +242,7 @@ const makeGameBoard = (someContent) => {
         <div class="${word[1]}"><span class="span-for-content">${word[0]}</span></div>
        </div>`);
   });
-  // Start timers
+  // Start timer
   timeHandler();
 };
 
@@ -293,7 +303,7 @@ const handlePicks = (event) => {
   cardPicks.push(pick);
 
   if (cardPicks.length === 2) {
-    setTimeout(decideMatch, 900, cardPicks);
+    setTimeout(decideMatch, 650, cardPicks);
   }
 };
 
@@ -387,21 +397,21 @@ const judgeScore = (seconds, centiseconds) => {
   let time = parseFloat(`${totalSeconds}.${centiseconds}`);
   const sortTimes = (a, b) => a - b
 
-
-  if (localStorage.getItem("Records") == null) {
-    bestTimes.push(time); 
-    localStorage.setItem("Records", JSON.stringify(bestTimes)); 
+  // Would be 'Null' if bestTimes hasn't been created in LocalStorage yet
+  if (localStorage.getItem("bestTimes") == null) {
+    bestTimes.push(time); // add to global array 'bestTimes'
+    localStorage.setItem("bestTimes", JSON.stringify(bestTimes)); // add to LocalStorage
     displayTopTimes()
-  } else if (localStorage.getItem("Records")) {
-    bestTimes = JSON.parse(localStorage.getItem("Records"));
+  } else if (localStorage.getItem("bestTimes")) {
+    bestTimes = JSON.parse(localStorage.getItem("bestTimes"));
         if (bestTimes.length != 5) {
           bestTimes.push(time);
-          bestTimes.sort(sortTimes); 
-          localStorage.setItem("Records", JSON.stringify(bestTimes));
+          bestTimes.sort(sortTimes); // Sorted fastest to slowest time
+          localStorage.setItem("bestTimes", JSON.stringify(bestTimes));
         } else if (bestTimes.length === 5 && time < bestTimes[bestTimes.length-1]) {
-            bestTimes.splice(bestTimes.length-1, 1, time); 
+            bestTimes.splice(bestTimes.length-1, 1, time); // Replaces last array element
             bestTimes.sort(sortTimes);
-            localStorage.setItem("Records", JSON.stringify(bestTimes));
+            localStorage.setItem("bestTimes", JSON.stringify(bestTimes));
         }
     displayTopTimes()
   }
